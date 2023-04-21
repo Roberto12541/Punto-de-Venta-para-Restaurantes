@@ -1,78 +1,170 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
+@font-face {
+  font-family: gilroy-b;
+  src: url("../assets/font/Gilroy-ExtraBold.otf");
 }
-body{
-    background-image:url(https://cuartopoderrm.blob.core.windows.net/images/2020/03/08/r1-1_1_1_642_482_0_0_0_0.jpg);
-
+@font-face {
+  font-family: gilroy;
+  src: url("../assets/font/Gilroy-Light.otf");
 }
-.titulo{
-    text-align: center;
-}
-
-.meseros__contenedor{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    height: 200px;
-    margin: 20px;
-    gap: 20px;
-}
-.meseros__1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: aqua;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  scroll-behavior: smooth;
+  scroll-margin-top: 20ex;
 }
 
-.meseros__2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: green;
+a {
+  text-decoration: none;
+  color: black;
 }
 
-.meseros__3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: red;
-}
-.contenedor-input{
-    display: flex;
-    justify-content: right;
-    margin: 20px;
-}
-.login{
-    width: 50%;
-    height: 50px;
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
 }
 
-.teclado{
-    width: 450px;
-    height: 300px;
-    background-color: rgba(0, 0, 0, 0.841);
-    margin-left: 40px;
-    display: flex;
-    justify-content: center;
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }
-.teclado__numeros{
-    padding-top: 20px;
-    width: 400px;
-    font-size: 40px;
-    color: white;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 20px;
 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #9c89ff;
 }
-.boton{
-    display: flex;
-    justify-content: right;
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
-.entrar{
-    width: 200px;
-    display: inline-block;
-    height: 50px;
+
+.dashboard {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 80px auto 25%;
 }
+.dashboard .sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboard .sidebar a {
+  transition: all 300ms;
+}
+.dashboard .sidebar a i {
+  font-size: 1.5rem;
+  color: #9c89ff;
+}
+.dashboard .sidebar a:hover {
+  transform: scale(1.3);
+}
+.dashboard .menu {
+  background-color: #f8f8f8;
+  overflow: scroll;
+}
+.dashboard .menu .categorias {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  gap: 20px;
+  overflow-x: scroll;
+}
+.dashboard .menu .categorias .categoria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 1.5rem;
+  background-color: #ffffff;
+  transition: all 300ms;
+  cursor: pointer;
+}
+.dashboard .menu .categorias .categoria:hover {
+  transform: scale(1.07);
+}
+.dashboard .menu .mesas {
+  display: grid;
+  grid-template-columns: repeat(12, auto);
+  gap: 20px;
+  overflow-x: scroll;
+}
+.dashboard .menu .mesas .mesa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 1.5rem;
+  transition: all 300ms;
+  cursor: pointer;
+  color: white;
+}
+.dashboard .menu .mesas .mesa:hover {
+  transform: scale(1.07);
+}
+.dashboard .menu .Catproductos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px 40px;
+}
+.dashboard .menu .Catproductos .productCategoria {
+  height: 10rem;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+.dashboard .menu .Catproductos .productCategoria .price {
+  color: #9c89ff;
+}
+.dashboard .menu .Catproductos .productCategoria .btns {
+  padding: 5px 10px;
+  border: none;
+  background-color: #9c89ff;
+  color: white;
+  border-radius: 10px;
+}
+.dashboard .details {
+  background-color: #ffffff;
+}
+.dashboard .details .items {
+  height: 28rem;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.dashboard .details .items .item {
+  border-radius: 20px;
+}
+.dashboard .details .items .item .cost {
+  font-weight: bold;
+  color: #9c89ff;
+}
+.dashboard .details .total {
+  border-top: dashed 2px #f8f8f8;
+  border-bottom: dashed 2px #f8f8f8;
+}
+.dashboard .details .total .price {
+  color: #9c89ff;
+}
+.dashboard .details .ordenar {
+  width: 90%;
+  padding: 15px 0px;
+  background-color: #9c89ff;
+  border: none;
+  color: white;
+  border-radius: 10px;
+}
+.dashboard .details .ordenar:hover {
+  background-color: #ffffff;
+  color: #9c89ff;
+  border: 1px solid #9c89ff;
+}
+
+/*# sourceMappingURL=style.css.map */

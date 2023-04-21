@@ -1,0 +1,261 @@
+.dashboard{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 80px auto 25%;
+    .sidebar{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        a{
+            transition: all 300ms;
+            i{
+                font-size: 1.5rem;
+                color: #9c89ff;
+            }
+            &:hover{
+                transform: scale(1.3);
+            }
+        }
+    }
+    .menu{
+        background-color: #f8f8f8;
+        overflow: scroll;
+        .categorias{
+            display: grid;
+            grid-template-columns: repeat(7, auto);
+            gap: 20px;
+            overflow-x: scroll;
+            .categoria{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 7.5rem;
+                height: 7.5rem;
+                border-radius: 1.5rem;
+                background-color: #ffffff;
+                transition: all 300ms;
+                cursor: pointer;
+                &:hover{
+                    transform: scale(1.07);
+                }
+            }
+        }
+        .mesas{
+            display: grid;
+            grid-template-columns: repeat(12, auto);
+            gap: 20px;
+            overflow-x: scroll;
+            .mesa{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 7.5rem;
+                height: 7.5rem;
+                border-radius: 1.5rem;
+                transition: all 300ms;
+                cursor: pointer;
+                color: white;
+                &:hover{
+                    transform: scale(1.07);
+                }
+            }
+        }
+        .Catproductos{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0px 40px;
+            .productCategoria{
+                height: 10rem;
+                border-radius: 20px;
+                background-color: #ffffff;
+                .price{
+                    color: #9c89ff ;
+                }
+                .btns{
+                    padding: 5px 10px;
+                    border: none;
+                    background-color: #9c89ff;
+                    color: white;
+                    border-radius: 10px;
+                }
+            }
+        }
+        // .mesas{
+        //     display: grid;
+        //     grid-template-columns: repeat(4, 1fr);
+        //     grid-template-rows: repeat(3, 1fr);
+        //     justify-content: space-evenly;
+        //     gap: 20px;
+        //     .mesa{
+        //         border-radius: 10px;
+        //         cursor: pointer;            
+        //         transition: all 300ms;
+        //         &:hover{
+        //             transform: scale(1.07);
+        //         }
+        //     }
+        // }
+    }
+    .details{
+        background-color: #ffffff;
+        .items{
+            height: 28rem;
+            display: flex;
+            flex-direction: column;
+            overflow: scroll;
+            overflow-x: hidden;
+            .item{
+                border-radius: 20px;
+                .cost{
+                    font-weight: bold;
+                    color: #9c89ff;
+                }
+            }
+        }
+        .total{
+            border-top: dashed 2px #f8f8f8;
+            border-bottom: dashed 2px #f8f8f8;
+            .price{
+                color: #9c89ff;
+            }
+        }
+        .ordenar{
+            width: 90%;
+            padding: 15px 0px;
+            background-color: #9c89ff;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            &:hover{
+                background-color: #ffffff;
+                color: #9c89ff;
+                border: 1px solid #9c89ff;
+            }
+        }
+    }
+}
+
+
+
+
+// .dashboard{
+//     height: 100vh;
+//     display: grid;
+//     grid-template-columns: 20% 80%;
+//     .sidebar{
+//         border-right: 1px solid #c2c2c2;
+//     }
+//     .content{
+//         .bar{
+//             height: 85px;
+//         }
+//         .contenido{
+//             margin: 10px 0 0 40px;
+//             .categorias{
+//                 display: grid;
+//                 grid-template-columns: repeat(4, 240px);
+//                 grid-template-rows: repeat(2, 320px);
+//                 gap: 18px;
+//                 justify-content: center;
+//                 .categoria{
+//                     display: flex;
+//                     flex-direction: column;
+//                     justify-content: center;
+//                     text-align: center;
+//                     gap: 20px;
+//                     cursor: pointer;
+//                     border-radius: 40px;
+//                     transition: background 0.4s ease-in-out 0.2s;
+//                     h4{
+//                         font-family: gilroy-b;
+//                     }
+//                     &:hover{
+//                         background-color: #ffca40;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// .precio{
+//     color: #ffca40;
+//     font-family: gilroy;
+//     letter-spacing: 2px;
+// }
+
+// .consome{
+//     h4{
+//         font-family: gilroy-b;
+//     }
+//     i{
+//         color: #ffca40;
+//     }
+// }
+
+// .opciones{
+//     font-size: 20px;
+//     font-family: gilroy-b;
+// }
+
+
+// // .dashboard{
+// //     height: 100vh;
+// //     width: 100vw;
+// //     display: grid;
+// //     grid-template-columns: 5.6rem auto 26rem;
+// //     .sidebar{
+// //         i{
+// //             color: $primaryColor;
+// //             font-size: 1.8rem;
+// //         }
+// //         .activo{
+// //             background-color: #fbfaff;
+// //             border-left: 4px solid $primaryColor;
+// //         }
+// //     }
+// //     .actions{
+// //         background-color: #f8f8f8;
+// //     }
+// //     .details{
+// //         height: 100vh;
+// //         .order{
+// //             display: flex;
+// //             flex-direction: column;
+// //             gap: 15px;
+// //             height: 40vh;
+// //             overflow-y: scroll;
+// //             overflow-x: hidden;
+// //             .item{
+// //                 border-radius: 25px;
+// //                 border: 1px solid #e6e5e5;
+// //                 .item-details{
+// //                     i{
+// //                         color: $primaryColor;
+// //                         font-size: 2rem;
+// //                     }
+// //                     .price{
+// //                         color: $primaryColor;
+// //                         font-weight: 600;
+// //                         font-size: 1.5rem;
+// //                     }
+// //                 }
+// //             }
+// //         }
+// //         .payment{
+// //             border-top: dashed 2px #e6e5e5;
+
+// //             .payment-details{
+// //                 overflow-y: scroll;
+// //             }
+
+// //         }
+// //         .total{
+// //             border-top: dashed 2px #e6e5e5;
+// //             border-bottom: dashed 2px #e6e5e5;
+// //         }
+// //     }
+// // }

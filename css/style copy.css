@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-image:url(https://cuartopoderrm.blob.core.windows.net/images/2020/03/08/r1-1_1_1_642_482_0_0_0_0.jpg);
+
+}
+.titulo{
+    text-align: center;
+}
+
+.meseros__contenedor{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    height: 200px;
+    margin: 20px;
+    gap: 20px;
+}
+.meseros__1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+
+.meseros__2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+}
+
+.meseros__3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+.contenedor-input{
+    display: flex;
+    justify-content: right;
+    margin: 20px;
+}
+.login{
+    width: 50%;
+    height: 50px;
+}
+
+.teclado{
+    width: 450px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.841);
+    margin-left: 40px;
+    display: flex;
+    justify-content: center;
+}
+.teclado__numeros{
+    padding-top: 20px;
+    width: 400px;
+    font-size: 40px;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+
+}
+.boton{
+    display: flex;
+    justify-content: right;
+}
+.entrar{
+    width: 200px;
+    display: inline-block;
+    height: 50px;
+}
